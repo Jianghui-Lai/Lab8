@@ -1,13 +1,11 @@
 package com.example.lab8;
 
+
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 //import org.junit.Before;
-//import com.example.lab8;
-import com.example.lab8.City;
-import com.example.lab8.CustomList;
-
 import org.junit.Before;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
@@ -21,9 +19,24 @@ public class CustomListTest {
     public void testAddcity() {
         CustomList list = new CustomList(null, citylist);
         City city = new City("Edmonton", "AB");
-        City city2 = new City("monton", "AB");
         list.addCity(city);
         assertEquals(1, list.getCount());
+    }
 
+
+ @Test
+    public void testHasCity(City city){
+        CustomList list = new CustomList(null, citylist);
+        City city2 = new City("Calgary", "AB");
+        Boolean contain;
+        contain = list.hasCity(city2);
+//        for(int i = 0 ; i < list.getCount(); i++){
+//            contain = citylist.get(i).getCityName().equals(city2.getCityName());
+//            if(contain){
+//                assertTrue(contain);
+//            }
+//        }
+
+        assertTrue(contain);
     }
 }
