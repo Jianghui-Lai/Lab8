@@ -21,7 +21,9 @@ public class CustomListTest {
     public void testAddcity() {
         CustomList list = new CustomList(null, citylist);
         City city = new City("Edmonton", "AB");
+        City city2 = new City("monton", "AB");
         list.addCity(city);
         assertEquals(1, list.getCount());
+
     }
 }
